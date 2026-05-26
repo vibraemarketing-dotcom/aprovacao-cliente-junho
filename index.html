@@ -9,8 +9,6 @@
     *{box-sizing:border-box;margin:0;padding:0;font-family:'Montserrat',sans-serif;}
     body{background:#F5F4F2;min-height:100vh;}
     .wrap{width:100%;max-width:480px;margin:0 auto;}
-
-    /* HEADER */
     .header{background:#0D0D0D;padding:1rem 1.25rem;}
     .header-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:.5rem;}
     .header-right{display:flex;flex-direction:column;align-items:flex-end;gap:3px;}
@@ -18,41 +16,27 @@
     .header-mes{color:#888;font-size:11px;}
     .badge-ap{background:#FFBE52;color:#412402;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;display:inline-block;}
     .header-data{color:#555;font-size:10px;margin-top:2px;}
-
-    /* DASH */
     .dash{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:.85rem 1rem;}
     .dc{background:#fff;border-radius:12px;padding:.75rem;text-align:center;border:0.5px solid #e8e5e0;}
     .dc .n{font-size:22px;font-weight:700;color:#0D0D0D;line-height:1;}
     .dc .l{font-size:10px;color:#999;margin-top:3px;font-weight:500;}
-
-    /* PROGRESS */
     .prog-wrap{padding:0 1rem .85rem;}
     .prog-lbl{font-size:11px;color:#999;margin-bottom:5px;display:flex;justify-content:space-between;}
     .prog-bg{background:#e8e5e0;border-radius:20px;height:6px;}
     .prog-fill{background:#FFBE52;height:6px;border-radius:20px;transition:width .4s;}
-
-    /* TABS */
     .tabs{display:flex;overflow-x:auto;padding:0 1rem .75rem;gap:6px;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
     .tabs::-webkit-scrollbar{display:none;}
     .tab{padding:7px 18px;font-size:12px;font-weight:600;cursor:pointer;border-radius:20px;color:#888;background:#fff;border:0.5px solid #e8e5e0;white-space:nowrap;flex-shrink:0;font-family:'Montserrat',sans-serif;transition:all .2s;}
     .tab.on{background:#FFBE52;border-color:#FFBE52;color:#412402;}
-
-    /* FILTERS */
     .filters{display:flex;overflow-x:auto;gap:6px;padding:0 1rem .75rem;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
     .filters::-webkit-scrollbar{display:none;}
     .fb{padding:5px 12px;font-size:11px;font-weight:600;border-radius:20px;border:0.5px solid #e8e5e0;background:#fff;cursor:pointer;color:#888;white-space:nowrap;flex-shrink:0;font-family:'Montserrat',sans-serif;transition:all .2s;}
     .fb.on{background:#0D0D0D;border-color:#0D0D0D;color:#fff;}
-
-    /* SEMANA */
     .sem-lbl{padding:.5rem 1rem .2rem;font-size:10px;font-weight:700;color:#FFBE52;letter-spacing:1px;text-transform:uppercase;}
-
-    /* CARDS */
     .cards{padding:0 1rem;display:flex;flex-direction:column;gap:10px;margin-bottom:10px;}
     .cc{background:#fff;border-radius:16px;border:0.5px solid #e8e5e0;overflow:hidden;transition:all .2s;}
     .cc.aprovado{border-color:#c0dd97;}
     .cc.ajuste{border-color:#f7c1c1;}
-
-    /* CARD HEADER */
     .ch{padding:.9rem 1rem;cursor:pointer;display:flex;align-items:center;gap:10px;}
     .ch-icon{width:32px;height:32px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px;font-weight:700;}
     .icon-reels{background:#FFF8EC;color:#854F0B;}
@@ -65,59 +49,38 @@
     .status-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;background:#e8e5e0;}
     .status-dot.aprovado{background:#639922;}
     .status-dot.ajuste{background:#E24B4A;}
-
-    /* CARD BODY */
     .cb{display:none;border-top:0.5px solid #f5f3f0;}
     .cb.open{display:block;}
-
-    /* CAMPOS */
     .fl{padding:.75rem 1rem 0;}
-    .fl:last-of-type{padding-bottom:.75rem;}
     .fl-lbl{font-size:9px;font-weight:700;color:#bbb;text-transform:uppercase;letter-spacing:.8px;margin-bottom:3px;}
     .fl-val{font-size:12px;color:#555;line-height:1.6;white-space:pre-wrap;}
     .cta-b{background:#FFFBF0;border-left:3px solid #FFBE52;padding:.5rem .85rem;margin-top:3px;}
     .cta-b .fl-val{font-weight:600;color:#854F0B;font-size:12px;}
-
-    /* OBSERVACAO */
     .obs-wrap{padding:.75rem 1rem;background:#FAFAF8;}
     .obs-lbl{font-size:9px;font-weight:700;color:#bbb;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px;}
     .obs{width:100%;border:0.5px solid #e8e5e0;border-radius:10px;padding:.6rem .75rem;font-size:12px;font-family:'Montserrat',sans-serif;color:#333;resize:none;min-height:70px;background:#fff;outline:none;transition:border-color .2s;}
     .obs:focus{border-color:#FFBE52;}
-
-    /* BOTOES */
     .btn-wrap{display:flex;gap:8px;padding:.75rem 1rem;border-top:0.5px solid #f5f3f0;}
     .btn-aceitar{flex:1;background:#639922;color:#fff;border:none;border-radius:10px;padding:11px;font-size:12px;font-weight:700;cursor:pointer;font-family:'Montserrat',sans-serif;display:flex;align-items:center;justify-content:center;gap:6px;transition:background .2s;}
-    .btn-aceitar:hover{background:#3B6D11;}
     .btn-aceitar.ativo{background:#3B6D11;}
     .btn-ajuste{flex:1;background:#fff;color:#A32D2D;border:0.5px solid #f7c1c1;border-radius:10px;padding:11px;font-size:12px;font-weight:700;cursor:pointer;font-family:'Montserrat',sans-serif;display:flex;align-items:center;justify-content:center;gap:6px;transition:all .2s;}
-    .btn-ajuste:hover{background:#FCEBEB;}
     .btn-ajuste.ativo{background:#FCEBEB;border-color:#E24B4A;}
-
-    /* BADGE STATUS */
     .sb{display:inline-block;padding:3px 10px;border-radius:20px;font-size:10px;font-weight:700;}
     .sp{background:#F5F3F0;color:#aaa;}
     .sa{background:#EAF3DE;color:#3B6D11;}
     .sj{background:#FCEBEB;color:#A32D2D;}
-
-    /* TABS WRAP */
     .tc-wrap{display:none;}
     .tc-wrap.on{display:block;}
-
-    /* ESTRATEGIA */
     .strat{padding:.85rem 1rem;}
     .sc{background:#fff;border-radius:16px;border:0.5px solid #e8e5e0;padding:1rem 1.25rem;margin-bottom:10px;}
     .sc h3{font-size:10px;font-weight:700;color:#FFBE52;margin-bottom:.6rem;text-transform:uppercase;letter-spacing:.8px;}
     .si{display:flex;gap:8px;margin-bottom:5px;align-items:flex-start;}
     .sd{width:4px;height:4px;border-radius:50%;background:#FFBE52;margin-top:8px;flex-shrink:0;}
     .st{font-size:12px;color:#666;line-height:1.6;}
-
-    /* RESUMO */
     .res-item{background:#fff;border-radius:12px;border:0.5px solid #e8e5e0;padding:.75rem 1rem;display:flex;align-items:center;gap:10px;margin-bottom:8px;}
     .res-item .info{flex:1;min-width:0;}
     .res-item .tt{font-size:12px;font-weight:700;color:#0D0D0D;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
     .res-item .dd{font-size:10px;color:#aaa;margin-top:1px;}
-
-    /* CONCLUSAO */
     .conclusao{margin:0 1rem 1.5rem;display:none;}
     .conclusao-card{background:#fff;border-radius:16px;border:0.5px solid #e8e5e0;padding:1.5rem;text-align:center;}
     .conclusao-icon{font-size:32px;margin-bottom:.75rem;}
@@ -128,15 +91,12 @@
     .btn-enviar:disabled{background:#e8e5e0;color:#aaa;cursor:not-allowed;}
     .msg-ok{background:#EAF3DE;color:#3B6D11;border-radius:10px;padding:10px;font-size:12px;font-weight:600;margin-top:10px;display:none;text-align:center;}
     .msg-err{background:#FCEBEB;color:#A32D2D;border-radius:10px;padding:10px;font-size:12px;font-weight:600;margin-top:10px;display:none;text-align:center;}
-
-    /* FOOTER */
     .footer{background:#0D0D0D;padding:.85rem 1.25rem;display:flex;align-items:center;justify-content:space-between;margin-top:.5rem;}
     .footer-conf{font-size:10px;color:#444;}
   </style>
 </head>
 <body>
 <div class="wrap">
-
   <header class="header">
     <div class="header-top">
       <svg width="80" height="22" viewBox="0 0 80 22"><text x="0" y="17" font-family="Montserrat,sans-serif" font-size="17" font-weight="700" fill="#FFBE52">VIBRAE</text></svg>
@@ -182,14 +142,10 @@
 
     <div class="sem-lbl">Semana 1 — 02 a 06 de junho</div>
     <div class="cards">
-
-      <div class="cc" data-tipo="reels" data-status="pendente" data-id="1" data-titulo="Enzimas para gordura localizada" data-data="02 de junho">
+      <div class="cc" data-tipo="reels" data-status="pendente" data-id="1" data-conteudo="Enzimas para gordura localizada" data-data="02 de junho">
         <div class="ch" onclick="tog(1)">
           <div class="ch-icon icon-reels">R</div>
-          <div class="ch-info">
-            <div class="ch-title">Enzimas para gordura localizada</div>
-            <div class="ch-date">02 de junho · Reels</div>
-          </div>
+          <div class="ch-info"><div class="ch-title">Enzimas para gordura localizada</div><div class="ch-date">02 de junho · Reels</div></div>
           <div class="status-dot" id="sd-1"></div>
         </div>
         <div class="cb" id="cb-1">
@@ -211,10 +167,7 @@ Quer entender se faz sentido pra você? Me chama no direct ou clica no link da b
 📍 Marechal Hermes/RJ</div></div>
           <div class="fl"><div class="fl-lbl">CTA</div><div class="cta-b"><div class="fl-val">Me chama no direct ou clica no link da bio.</div></div></div>
           <div class="fl"><div class="fl-lbl">Hashtags</div><div class="fl-val">#lipoenzimática #gorduraalocalizada #estéticacorporal #aliceferreiraestetica #marechalhermes</div></div>
-          <div class="obs-wrap" id="obs-wrap-1" style="display:none">
-            <div class="obs-lbl">Qual ajuste você precisa?</div>
-            <textarea class="obs" id="obs-1" placeholder="Descreva o que precisa ser alterado..."></textarea>
-          </div>
+          <div class="obs-wrap" id="obs-wrap-1" style="display:none"><div class="obs-lbl">Qual ajuste você precisa?</div><textarea class="obs" id="obs-1" placeholder="Descreva o que precisa ser alterado..."></textarea></div>
           <div class="btn-wrap">
             <button class="btn-aceitar" id="btn-a-1" onclick="apr(1)">✓ Aceitar</button>
             <button class="btn-ajuste" id="btn-j-1" onclick="ajst(1)">✎ Solicitar ajuste</button>
@@ -222,13 +175,10 @@ Quer entender se faz sentido pra você? Me chama no direct ou clica no link da b
         </div>
       </div>
 
-      <div class="cc" data-tipo="foto" data-status="pendente" data-id="2" data-titulo="Enzimas — autoridade e conexão" data-data="04 de junho">
+      <div class="cc" data-tipo="foto" data-status="pendente" data-id="2" data-conteudo="Enzimas — autoridade e conexão" data-data="04 de junho">
         <div class="ch" onclick="tog(2)">
           <div class="ch-icon icon-foto">F</div>
-          <div class="ch-info">
-            <div class="ch-title">Enzimas — autoridade e conexão</div>
-            <div class="ch-date">04 de junho · Foto</div>
-          </div>
+          <div class="ch-info"><div class="ch-title">Enzimas — autoridade e conexão</div><div class="ch-date">04 de junho · Foto</div></div>
           <div class="status-dot" id="sd-2"></div>
         </div>
         <div class="cb" id="cb-2">
@@ -239,10 +189,7 @@ Quando alguém chega aqui com queixa de gordura localizada, eu não aplico um pa
 📍 Marechal Hermes/RJ | Link na bio pra agendar</div></div>
           <div class="fl"><div class="fl-lbl">CTA</div><div class="cta-b"><div class="fl-val">Me manda uma mensagem — adoro explicar!</div></div></div>
           <div class="fl"><div class="fl-lbl">Hashtags</div><div class="fl-val">#estéticacorporal #protocoloindividualizado #aliceferreiraestetica #enzimas</div></div>
-          <div class="obs-wrap" id="obs-wrap-2" style="display:none">
-            <div class="obs-lbl">Qual ajuste você precisa?</div>
-            <textarea class="obs" id="obs-2" placeholder="Descreva o que precisa ser alterado..."></textarea>
-          </div>
+          <div class="obs-wrap" id="obs-wrap-2" style="display:none"><div class="obs-lbl">Qual ajuste você precisa?</div><textarea class="obs" id="obs-2" placeholder="Descreva o que precisa ser alterado..."></textarea></div>
           <div class="btn-wrap">
             <button class="btn-aceitar" id="btn-a-2" onclick="apr(2)">✓ Aceitar</button>
             <button class="btn-ajuste" id="btn-j-2" onclick="ajst(2)">✎ Solicitar ajuste</button>
@@ -250,13 +197,10 @@ Quando alguém chega aqui com queixa de gordura localizada, eu não aplico um pa
         </div>
       </div>
 
-      <div class="cc" data-tipo="stories" data-status="pendente" data-id="3" data-titulo="Stories — Semana 1" data-data="02 a 06 de junho">
+      <div class="cc" data-tipo="stories" data-status="pendente" data-id="3" data-conteudo="Stories — Semana 1" data-data="02 a 06 de junho">
         <div class="ch" onclick="tog(3)">
           <div class="ch-icon icon-stories">S</div>
-          <div class="ch-info">
-            <div class="ch-title">Stories — Semana 1</div>
-            <div class="ch-date">02 a 06 de junho · Stories</div>
-          </div>
+          <div class="ch-info"><div class="ch-title">Stories — Semana 1</div><div class="ch-date">02 a 06 de junho · Stories</div></div>
           <div class="status-dot" id="sd-3"></div>
         </div>
         <div class="cb" id="cb-3">
@@ -266,29 +210,21 @@ Quarta (04/jun): "Muita gente falou de abdômen e culote — tem coisa boa chega
 Quinta (05/jun): Depoimento de cliente.
 Sexta (06/jun): "Última semana com vagas abertas pra enzimas. Me chama agora."</div></div>
           <div class="fl"><div class="fl-lbl">CTA</div><div class="cta-b"><div class="fl-val">Me chama agora — agenda por ordem de chegada.</div></div></div>
-          <div class="obs-wrap" id="obs-wrap-3" style="display:none">
-            <div class="obs-lbl">Qual ajuste você precisa?</div>
-            <textarea class="obs" id="obs-3" placeholder="Descreva o que precisa ser alterado..."></textarea>
-          </div>
+          <div class="obs-wrap" id="obs-wrap-3" style="display:none"><div class="obs-lbl">Qual ajuste você precisa?</div><textarea class="obs" id="obs-3" placeholder="Descreva o que precisa ser alterado..."></textarea></div>
           <div class="btn-wrap">
             <button class="btn-aceitar" id="btn-a-3" onclick="apr(3)">✓ Aceitar</button>
             <button class="btn-ajuste" id="btn-j-3" onclick="ajst(3)">✎ Solicitar ajuste</button>
           </div>
         </div>
       </div>
-
     </div>
 
     <div class="sem-lbl">Semana 2 — 09 a 13 de junho</div>
     <div class="cards">
-
-      <div class="cc" data-tipo="carrossel" data-status="pendente" data-id="4" data-titulo="Por que a limpeza de pele é o começo de tudo?" data-data="09 de junho">
+      <div class="cc" data-tipo="carrossel" data-status="pendente" data-id="4" data-conteudo="Por que a limpeza de pele e o comeco de tudo" data-data="09 de junho">
         <div class="ch" onclick="tog(4)">
           <div class="ch-icon icon-carrossel">C</div>
-          <div class="ch-info">
-            <div class="ch-title">Por que a limpeza de pele é o começo de tudo?</div>
-            <div class="ch-date">09 de junho · Carrossel</div>
-          </div>
+          <div class="ch-info"><div class="ch-title">Por que a limpeza de pele é o começo de tudo?</div><div class="ch-date">09 de junho · Carrossel</div></div>
           <div class="status-dot" id="sd-4"></div>
         </div>
         <div class="cb" id="cb-4">
@@ -299,11 +235,7 @@ Slide 4: "Quando a pele está preparada, o microagulhamento age melhor."
 Slide 5: "Por isso faço limpeza e, 21 dias depois, o microagulhamento."
 Slide 6 (CTA): "Me chama no direct. Tenho vagas abertas para junho."</div></div>
           <div class="fl"><div class="fl-lbl">CTA</div><div class="cta-b"><div class="fl-val">Salva esse post e me chama no direct. Vagas abertas para junho.</div></div></div>
-          <div class="fl"><div class="fl-lbl">Hashtags</div><div class="fl-val">#limpezadepele #microagulhamento #pelepreparada #skincare #aliceferreiraestetica</div></div>
-          <div class="obs-wrap" id="obs-wrap-4" style="display:none">
-            <div class="obs-lbl">Qual ajuste você precisa?</div>
-            <textarea class="obs" id="obs-4" placeholder="Descreva o que precisa ser alterado..."></textarea>
-          </div>
+          <div class="obs-wrap" id="obs-wrap-4" style="display:none"><div class="obs-lbl">Qual ajuste você precisa?</div><textarea class="obs" id="obs-4" placeholder="Descreva o que precisa ser alterado..."></textarea></div>
           <div class="btn-wrap">
             <button class="btn-aceitar" id="btn-a-4" onclick="apr(4)">✓ Aceitar</button>
             <button class="btn-ajuste" id="btn-j-4" onclick="ajst(4)">✎ Solicitar ajuste</button>
@@ -311,24 +243,16 @@ Slide 6 (CTA): "Me chama no direct. Tenho vagas abertas para junho."</div></div>
         </div>
       </div>
 
-      <div class="cc" data-tipo="reels" data-status="pendente" data-id="5" data-titulo="Microagulhamento — os 21 dias" data-data="12 de junho">
+      <div class="cc" data-tipo="reels" data-status="pendente" data-id="5" data-conteudo="Microagulhamento — os 21 dias" data-data="12 de junho">
         <div class="ch" onclick="tog(5)">
           <div class="ch-icon icon-reels">R</div>
-          <div class="ch-info">
-            <div class="ch-title">Microagulhamento — os 21 dias</div>
-            <div class="ch-date">12 de junho · Reels</div>
-          </div>
+          <div class="ch-info"><div class="ch-title">Microagulhamento — os 21 dias</div><div class="ch-date">12 de junho · Reels</div></div>
           <div class="status-dot" id="sd-5"></div>
         </div>
         <div class="cb" id="cb-5">
           <div class="fl"><div class="fl-lbl">Gancho</div><div class="fl-val">Você sabia que tem um motivo específico pra eu esperar 21 dias entre a limpeza de pele e o microagulhamento?</div></div>
-          <div class="fl"><div class="fl-lbl">Texto na tela</div><div class="fl-val">Vagas abertas — me chama</div></div>
           <div class="fl"><div class="fl-lbl">CTA</div><div class="cta-b"><div class="fl-val">Vagas abertas em junho. Me chama no direct.</div></div></div>
-          <div class="fl"><div class="fl-lbl">Hashtags</div><div class="fl-val">#microagulhamento #limpezadepele #protocolofacial #pelesaudavel #aliceferreiraestetica</div></div>
-          <div class="obs-wrap" id="obs-wrap-5" style="display:none">
-            <div class="obs-lbl">Qual ajuste você precisa?</div>
-            <textarea class="obs" id="obs-5" placeholder="Descreva o que precisa ser alterado..."></textarea>
-          </div>
+          <div class="obs-wrap" id="obs-wrap-5" style="display:none"><div class="obs-lbl">Qual ajuste você precisa?</div><textarea class="obs" id="obs-5" placeholder="Descreva o que precisa ser alterado..."></textarea></div>
           <div class="btn-wrap">
             <button class="btn-aceitar" id="btn-a-5" onclick="apr(5)">✓ Aceitar</button>
             <button class="btn-ajuste" id="btn-j-5" onclick="ajst(5)">✎ Solicitar ajuste</button>
@@ -336,13 +260,10 @@ Slide 6 (CTA): "Me chama no direct. Tenho vagas abertas para junho."</div></div>
         </div>
       </div>
 
-      <div class="cc" data-tipo="stories" data-status="pendente" data-id="6" data-titulo="Stories — Semana 2" data-data="09 a 13 de junho">
+      <div class="cc" data-tipo="stories" data-status="pendente" data-id="6" data-conteudo="Stories — Semana 2" data-data="09 a 13 de junho">
         <div class="ch" onclick="tog(6)">
           <div class="ch-icon icon-stories">S</div>
-          <div class="ch-info">
-            <div class="ch-title">Stories — Semana 2</div>
-            <div class="ch-date">09 a 13 de junho · Stories</div>
-          </div>
+          <div class="ch-info"><div class="ch-title">Stories — Semana 2</div><div class="ch-date">09 a 13 de junho · Stories</div></div>
           <div class="status-dot" id="sd-6"></div>
         </div>
         <div class="cb" id="cb-6">
@@ -352,40 +273,27 @@ Quarta (11/jun): "O melhor momento pra começar é antes de ter algum problema s
 Quinta (12/jun): Repostar o Reels com caixinha.
 Sexta (13/jun): "Ainda dá tempo — link na bio ou direct."</div></div>
           <div class="fl"><div class="fl-lbl">CTA</div><div class="cta-b"><div class="fl-val">Ainda dá tempo — link na bio ou direct.</div></div></div>
-          <div class="obs-wrap" id="obs-wrap-6" style="display:none">
-            <div class="obs-lbl">Qual ajuste você precisa?</div>
-            <textarea class="obs" id="obs-6" placeholder="Descreva o que precisa ser alterado..."></textarea>
-          </div>
+          <div class="obs-wrap" id="obs-wrap-6" style="display:none"><div class="obs-lbl">Qual ajuste você precisa?</div><textarea class="obs" id="obs-6" placeholder="Descreva o que precisa ser alterado..."></textarea></div>
           <div class="btn-wrap">
             <button class="btn-aceitar" id="btn-a-6" onclick="apr(6)">✓ Aceitar</button>
             <button class="btn-ajuste" id="btn-j-6" onclick="ajst(6)">✎ Solicitar ajuste</button>
           </div>
         </div>
       </div>
-
     </div>
 
     <div class="sem-lbl">Semana 3 — 16 a 20 de junho</div>
     <div class="cards">
-
-      <div class="cc" data-tipo="reels" data-status="pendente" data-id="7" data-titulo="Glúteos — Pump Up + Corrente Russa + Modeladora" data-data="16 de junho">
+      <div class="cc" data-tipo="reels" data-status="pendente" data-id="7" data-conteudo="Gluteos — Pump Up + Corrente Russa + Modeladora" data-data="16 de junho">
         <div class="ch" onclick="tog(7)">
           <div class="ch-icon icon-reels">R</div>
-          <div class="ch-info">
-            <div class="ch-title">Glúteos — Pump Up + Corrente Russa + Modeladora</div>
-            <div class="ch-date">16 de junho · Reels</div>
-          </div>
+          <div class="ch-info"><div class="ch-title">Glúteos — Pump Up + Corrente Russa + Modeladora</div><div class="ch-date">16 de junho · Reels</div></div>
           <div class="status-dot" id="sd-7"></div>
         </div>
         <div class="cb" id="cb-7">
           <div class="fl"><div class="fl-lbl">Gancho</div><div class="fl-val">Três aparelhos, uma sessão, e o glúteo já sai diferente daqui.</div></div>
-          <div class="fl"><div class="fl-lbl">Texto na tela</div><div class="fl-val">Vagas limitadas — Direct aberto</div></div>
           <div class="fl"><div class="fl-lbl">CTA</div><div class="cta-b"><div class="fl-val">Vagas abertas em junho. Me chama no direct.</div></div></div>
-          <div class="fl"><div class="fl-lbl">Hashtags</div><div class="fl-val">#gluteos #pumpup #correnterussa #massagemmodeladora #aliceferreiraestetica #marechalhermes</div></div>
-          <div class="obs-wrap" id="obs-wrap-7" style="display:none">
-            <div class="obs-lbl">Qual ajuste você precisa?</div>
-            <textarea class="obs" id="obs-7" placeholder="Descreva o que precisa ser alterado..."></textarea>
-          </div>
+          <div class="obs-wrap" id="obs-wrap-7" style="display:none"><div class="obs-lbl">Qual ajuste você precisa?</div><textarea class="obs" id="obs-7" placeholder="Descreva o que precisa ser alterado..."></textarea></div>
           <div class="btn-wrap">
             <button class="btn-aceitar" id="btn-a-7" onclick="apr(7)">✓ Aceitar</button>
             <button class="btn-ajuste" id="btn-j-7" onclick="ajst(7)">✎ Solicitar ajuste</button>
@@ -393,13 +301,10 @@ Sexta (13/jun): "Ainda dá tempo — link na bio ou direct."</div></div>
         </div>
       </div>
 
-      <div class="cc" data-tipo="carrossel" data-status="pendente" data-id="8" data-titulo="O que cada aparelho faz no seu glúteo" data-data="19 de junho">
+      <div class="cc" data-tipo="carrossel" data-status="pendente" data-id="8" data-conteudo="O que cada aparelho faz no seu gluteo" data-data="19 de junho">
         <div class="ch" onclick="tog(8)">
           <div class="ch-icon icon-carrossel">C</div>
-          <div class="ch-info">
-            <div class="ch-title">O que cada aparelho faz no seu glúteo</div>
-            <div class="ch-date">19 de junho · Carrossel</div>
-          </div>
+          <div class="ch-info"><div class="ch-title">O que cada aparelho faz no seu glúteo</div><div class="ch-date">19 de junho · Carrossel</div></div>
           <div class="status-dot" id="sd-8"></div>
         </div>
         <div class="cb" id="cb-8">
@@ -411,11 +316,7 @@ Slide 5: "Os três juntos é estratégia — cada um age numa camada diferente."
 Slide 6: "Protocolo: 2x por semana. Atendimento individual."
 Slide 7 (CTA): "Quer começar em junho? Me chama no direct."</div></div>
           <div class="fl"><div class="fl-lbl">CTA</div><div class="cta-b"><div class="fl-val">Salva, compartilha e me chama no direct — vagas disponíveis.</div></div></div>
-          <div class="fl"><div class="fl-lbl">Hashtags</div><div class="fl-val">#gluteos #correnterussa #pumpup #modeladora #estéticacorporal #aliceferreiraestetica</div></div>
-          <div class="obs-wrap" id="obs-wrap-8" style="display:none">
-            <div class="obs-lbl">Qual ajuste você precisa?</div>
-            <textarea class="obs" id="obs-8" placeholder="Descreva o que precisa ser alterado..."></textarea>
-          </div>
+          <div class="obs-wrap" id="obs-wrap-8" style="display:none"><div class="obs-lbl">Qual ajuste você precisa?</div><textarea class="obs" id="obs-8" placeholder="Descreva o que precisa ser alterado..."></textarea></div>
           <div class="btn-wrap">
             <button class="btn-aceitar" id="btn-a-8" onclick="apr(8)">✓ Aceitar</button>
             <button class="btn-ajuste" id="btn-j-8" onclick="ajst(8)">✎ Solicitar ajuste</button>
@@ -423,13 +324,10 @@ Slide 7 (CTA): "Quer começar em junho? Me chama no direct."</div></div>
         </div>
       </div>
 
-      <div class="cc" data-tipo="stories" data-status="pendente" data-id="9" data-titulo="Stories — Semana 3" data-data="16 a 20 de junho">
+      <div class="cc" data-tipo="stories" data-status="pendente" data-id="9" data-conteudo="Stories — Semana 3" data-data="16 a 20 de junho">
         <div class="ch" onclick="tog(9)">
           <div class="ch-icon icon-stories">S</div>
-          <div class="ch-info">
-            <div class="ch-title">Stories — Semana 3</div>
-            <div class="ch-date">16 a 20 de junho · Stories</div>
-          </div>
+          <div class="ch-info"><div class="ch-title">Stories — Semana 3</div><div class="ch-date">16 a 20 de junho · Stories</div></div>
           <div class="status-dot" id="sd-9"></div>
         </div>
         <div class="cb" id="cb-9">
@@ -439,40 +337,27 @@ Quarta (18/jun): "Já tenho horários reservados essa semana. Me chama."
 Quinta (19/jun): Repostar carrossel com adesivo "Salva!"
 Sexta (20/jun): "Essa semana atendi uma cliente que estava com vergonha. E quando ela viu o resultado... ela mandou mensagem."</div></div>
           <div class="fl"><div class="fl-lbl">CTA</div><div class="cta-b"><div class="fl-val">Me chama pra a gente ver o que faz sentido pro seu caso.</div></div></div>
-          <div class="obs-wrap" id="obs-wrap-9" style="display:none">
-            <div class="obs-lbl">Qual ajuste você precisa?</div>
-            <textarea class="obs" id="obs-9" placeholder="Descreva o que precisa ser alterado..."></textarea>
-          </div>
+          <div class="obs-wrap" id="obs-wrap-9" style="display:none"><div class="obs-lbl">Qual ajuste você precisa?</div><textarea class="obs" id="obs-9" placeholder="Descreva o que precisa ser alterado..."></textarea></div>
           <div class="btn-wrap">
             <button class="btn-aceitar" id="btn-a-9" onclick="apr(9)">✓ Aceitar</button>
             <button class="btn-ajuste" id="btn-j-9" onclick="ajst(9)">✎ Solicitar ajuste</button>
           </div>
         </div>
       </div>
-
     </div>
 
     <div class="sem-lbl">Semana 4 — 23 a 27 de junho</div>
     <div class="cards">
-
-      <div class="cc" data-tipo="reels" data-status="pendente" data-id="10" data-titulo="Modeladora + Endermoterapia + Corrente Russa" data-data="23 de junho">
+      <div class="cc" data-tipo="reels" data-status="pendente" data-id="10" data-conteudo="Modeladora + Endermoterapia + Corrente Russa" data-data="23 de junho">
         <div class="ch" onclick="tog(10)">
           <div class="ch-icon icon-reels">R</div>
-          <div class="ch-info">
-            <div class="ch-title">Modeladora + Endermoterapia + Corrente Russa</div>
-            <div class="ch-date">23 de junho · Reels</div>
-          </div>
+          <div class="ch-info"><div class="ch-title">Modeladora + Endermoterapia + Corrente Russa</div><div class="ch-date">23 de junho · Reels</div></div>
           <div class="status-dot" id="sd-10"></div>
         </div>
         <div class="cb" id="cb-10">
           <div class="fl"><div class="fl-lbl">Gancho</div><div class="fl-val">O que você sente durante uma sessão de massagem modeladora com endermoterapia? Te conto.</div></div>
-          <div class="fl"><div class="fl-lbl">Texto na tela</div><div class="fl-val">Últimas vagas de junho</div></div>
           <div class="fl"><div class="fl-lbl">CTA</div><div class="cta-b"><div class="fl-val">Últimas vagas de junho. Me chama no direct agora.</div></div></div>
-          <div class="fl"><div class="fl-lbl">Hashtags</div><div class="fl-val">#massagemmodeladora #endermoterapia #correnterussa #estéticacorporal #aliceferreiraestetica</div></div>
-          <div class="obs-wrap" id="obs-wrap-10" style="display:none">
-            <div class="obs-lbl">Qual ajuste você precisa?</div>
-            <textarea class="obs" id="obs-10" placeholder="Descreva o que precisa ser alterado..."></textarea>
-          </div>
+          <div class="obs-wrap" id="obs-wrap-10" style="display:none"><div class="obs-lbl">Qual ajuste você precisa?</div><textarea class="obs" id="obs-10" placeholder="Descreva o que precisa ser alterado..."></textarea></div>
           <div class="btn-wrap">
             <button class="btn-aceitar" id="btn-a-10" onclick="apr(10)">✓ Aceitar</button>
             <button class="btn-ajuste" id="btn-j-10" onclick="ajst(10)">✎ Solicitar ajuste</button>
@@ -480,13 +365,10 @@ Sexta (20/jun): "Essa semana atendi uma cliente que estava com vergonha. E quand
         </div>
       </div>
 
-      <div class="cc" data-tipo="carrossel" data-status="pendente" data-id="11" data-titulo="O protocolo de abdômen que eu mais faço em junho" data-data="26 de junho">
+      <div class="cc" data-tipo="carrossel" data-status="pendente" data-id="11" data-conteudo="O protocolo de abdomen que eu mais faco em junho" data-data="26 de junho">
         <div class="ch" onclick="tog(11)">
           <div class="ch-icon icon-carrossel">C</div>
-          <div class="ch-info">
-            <div class="ch-title">O protocolo de abdômen que eu mais faço em junho</div>
-            <div class="ch-date">26 de junho · Carrossel</div>
-          </div>
+          <div class="ch-info"><div class="ch-title">O protocolo de abdômen que eu mais faço em junho</div><div class="ch-date">26 de junho · Carrossel</div></div>
           <div class="status-dot" id="sd-11"></div>
         </div>
         <div class="cb" id="cb-11">
@@ -497,11 +379,7 @@ Slide 4: "Não é magia — é consistência e frequência certa."
 Slide 5: "Cada protocolo é montado de acordo com o seu caso."
 Slide 6 (CTA): "Quer terminar junho com esse processo iniciado? Me chama."</div></div>
           <div class="fl"><div class="fl-lbl">CTA</div><div class="cta-b"><div class="fl-val">Últimas vagas de junho. Me chama agora.</div></div></div>
-          <div class="fl"><div class="fl-lbl">Hashtags</div><div class="fl-val">#abdomen #massagemmodeladora #endermoterapia #correnterussa #aliceferreiraestetica #marechalhermes</div></div>
-          <div class="obs-wrap" id="obs-wrap-11" style="display:none">
-            <div class="obs-lbl">Qual ajuste você precisa?</div>
-            <textarea class="obs" id="obs-11" placeholder="Descreva o que precisa ser alterado..."></textarea>
-          </div>
+          <div class="obs-wrap" id="obs-wrap-11" style="display:none"><div class="obs-lbl">Qual ajuste você precisa?</div><textarea class="obs" id="obs-11" placeholder="Descreva o que precisa ser alterado..."></textarea></div>
           <div class="btn-wrap">
             <button class="btn-aceitar" id="btn-a-11" onclick="apr(11)">✓ Aceitar</button>
             <button class="btn-ajuste" id="btn-j-11" onclick="ajst(11)">✎ Solicitar ajuste</button>
@@ -509,13 +387,10 @@ Slide 6 (CTA): "Quer terminar junho com esse processo iniciado? Me chama."</div>
         </div>
       </div>
 
-      <div class="cc" data-tipo="stories" data-status="pendente" data-id="12" data-titulo="Stories — Semana 4" data-data="23 a 27 de junho">
+      <div class="cc" data-tipo="stories" data-status="pendente" data-id="12" data-conteudo="Stories — Semana 4" data-data="23 a 27 de junho">
         <div class="ch" onclick="tog(12)">
           <div class="ch-icon icon-stories">S</div>
-          <div class="ch-info">
-            <div class="ch-title">Stories — Semana 4</div>
-            <div class="ch-date">23 a 27 de junho · Stories</div>
-          </div>
+          <div class="ch-info"><div class="ch-title">Stories — Semana 4</div><div class="ch-date">23 a 27 de junho · Stories</div></div>
           <div class="status-dot" id="sd-12"></div>
         </div>
         <div class="cb" id="cb-12">
@@ -525,17 +400,13 @@ Quarta (25/jun): Caixinha de perguntas — "Última chance de tirar suas dúvida
 Quinta (26/jun): Bastidor com texto — "Mais uma tarde de atendimentos. Me chama."
 Sexta (27/jun): "Hoje é minha última sexta de junho. Obrigada pela confiança. Julho vem com novidades."</div></div>
           <div class="fl"><div class="fl-lbl">CTA</div><div class="cta-b"><div class="fl-val">Últimas vagas de junho — me chama agora. Julho vem com novidades.</div></div></div>
-          <div class="obs-wrap" id="obs-wrap-12" style="display:none">
-            <div class="obs-lbl">Qual ajuste você precisa?</div>
-            <textarea class="obs" id="obs-12" placeholder="Descreva o que precisa ser alterado..."></textarea>
-          </div>
+          <div class="obs-wrap" id="obs-wrap-12" style="display:none"><div class="obs-lbl">Qual ajuste você precisa?</div><textarea class="obs" id="obs-12" placeholder="Descreva o que precisa ser alterado..."></textarea></div>
           <div class="btn-wrap">
             <button class="btn-aceitar" id="btn-a-12" onclick="apr(12)">✓ Aceitar</button>
             <button class="btn-ajuste" id="btn-j-12" onclick="ajst(12)">✎ Solicitar ajuste</button>
           </div>
         </div>
       </div>
-
     </div>
 
     <div class="conclusao" id="conclusao">
@@ -543,12 +414,11 @@ Sexta (27/jun): "Hoje é minha última sexta de junho. Obrigada pela confiança.
         <div class="conclusao-icon">🎉</div>
         <h3>Tudo avaliado!</h3>
         <p>Clique no botão abaixo para enviar o resumo das aprovações para a Vibrae.</p>
-        <button class="btn-enviar" onclick="enviarMake()">Enviar aprovações para a Vibrae</button>
+        <button class="btn-enviar" id="btn-enviar" onclick="enviarTudo()">Enviar aprovações para a Vibrae</button>
         <div class="msg-ok" id="msg-ok">Aprovações registradas com sucesso! A Vibrae já foi notificada.</div>
         <div class="msg-err" id="msg-err">Não foi possível enviar. Tente novamente.</div>
       </div>
     </div>
-
   </div>
 
   <div id="et" class="tc-wrap">
@@ -557,7 +427,7 @@ Sexta (27/jun): "Hoje é minha última sexta de junho. Obrigada pela confiança.
       <div class="sc"><h3>Direção criativa</h3><div class="si"><div class="sd"></div><div class="st">Tom humanizado, técnico e acolhedor. Semana 1: Enzimas. Semana 2: Limpeza + microagulhamento. Semana 3: Glúteos. Semana 4: Abdômen + urgência.</div></div></div>
       <div class="sc"><h3>Público-alvo</h3><div class="si"><div class="sd"></div><div class="st">Mulheres de 25 a 50 anos, Marechal Hermes e região, que buscam atendimento estético individualizado.</div></div></div>
       <div class="sc"><h3>Tom de voz</h3><div class="si"><div class="sd"></div><div class="st">Acolhedor, técnico sem ser frio, humano sem ser informal demais.</div></div></div>
-      <div class="sc"><h3>Linha editorial</h3><div class="si"><div class="sd"></div><div class="st">4 Reels + 3 Carrosséis + 1 Foto + 4 pacotes de Stories = 12 conteúdos no total. Todo conteúdo direciona para o direct ou link na bio.</div></div></div>
+      <div class="sc"><h3>Linha editorial</h3><div class="si"><div class="sd"></div><div class="st">4 Reels + 3 Carrosséis + 1 Foto + 4 pacotes de Stories = 12 conteúdos no total.</div></div></div>
     </div>
   </div>
 
@@ -582,96 +452,111 @@ Sexta (27/jun): "Hoje é minha última sexta de junho. Obrigada pela confiança.
     <svg width="64" height="20" viewBox="0 0 64 20"><text x="0" y="15" font-family="Montserrat,sans-serif" font-size="15" font-weight="700" fill="#FFBE52">VIBRAE</text></svg>
     <span class="footer-conf">Confidencial — Alice Ferreira Estética</span>
   </footer>
-
 </div>
 
 <script>
-  const MAKE_WEBHOOK = 'https://hook.us2.make.com/pfminakq67q41bec683nc7linkozl0uh';
-  const CLIENTE = 'Alice Ferreira Estética';
-  const MES = 'Junho 2026';
+  const WEBHOOK = 'https://hook.us2.make.com/pfminakq67q41bec683nc7linkozl0uh';
   const TOTAL = 12;
   const st = {};
   for (let i = 1; i <= TOTAL; i++) st[i] = 'pendente';
 
+  function hoje() {
+    const d = new Date();
+    const dd = String(d.getDate()).padStart(2,'0');
+    const mm = String(d.getMonth()+1).padStart(2,'0');
+    const yyyy = d.getFullYear();
+    return dd+'/'+mm+'/'+yyyy;
+  }
+
   function upd() {
-    let a = 0, j = 0, p = 0;
-    for (let i = 1; i <= TOTAL; i++) {
-      if (st[i] === 'aprovado') a++;
-      else if (st[i] === 'ajuste') j++;
+    let a=0,j=0,p=0;
+    for(let i=1;i<=TOTAL;i++){
+      if(st[i]==='aprovado') a++;
+      else if(st[i]==='ajuste') j++;
       else p++;
     }
-    document.getElementById('dn-a').textContent = a;
-    document.getElementById('dn-p').textContent = p;
-    document.getElementById('dn-j').textContent = j;
-    const pct = Math.round(((a + j) / TOTAL) * 100);
-    document.getElementById('pct').textContent = pct + '%';
-    document.getElementById('pf').style.width = pct + '%';
-    document.getElementById('conclusao').style.display = (a + j) === TOTAL ? 'block' : 'none';
+    document.getElementById('dn-a').textContent=a;
+    document.getElementById('dn-p').textContent=p;
+    document.getElementById('dn-j').textContent=j;
+    const pct=Math.round(((a+j)/TOTAL)*100);
+    document.getElementById('pct').textContent=pct+'%';
+    document.getElementById('pf').style.width=pct+'%';
+    document.getElementById('conclusao').style.display=(a+j)===TOTAL?'block':'none';
   }
 
   function apr(id) {
-    st[id] = 'aprovado';
-    const card = document.querySelector('[data-id="' + id + '"]');
-    card.dataset.status = 'aprovado';
-    card.className = card.className.replace(/aprovado|ajuste/g, '').trim() + ' aprovado';
-    document.getElementById('sd-' + id).className = 'status-dot aprovado';
-    document.getElementById('obs-wrap-' + id).style.display = 'none';
-    document.getElementById('btn-a-' + id).className = 'btn-aceitar ativo';
-    document.getElementById('btn-j-' + id).className = 'btn-ajuste';
-    const rs = document.getElementById('rs-' + id);
-    if (rs) { rs.className = 'sb sa'; rs.textContent = 'Aceito'; }
+    st[id]='aprovado';
+    const card=document.querySelector('[data-id="'+id+'"]');
+    card.dataset.status='aprovado';
+    card.className=card.className.replace(/aprovado|ajuste/g,'').trim()+' aprovado';
+    document.getElementById('sd-'+id).className='status-dot aprovado';
+    document.getElementById('obs-wrap-'+id).style.display='none';
+    document.getElementById('btn-a-'+id).className='btn-aceitar ativo';
+    document.getElementById('btn-j-'+id).className='btn-ajuste';
+    const rs=document.getElementById('rs-'+id);
+    if(rs){rs.className='sb sa';rs.textContent='Aceito';}
     upd();
   }
 
   function ajst(id) {
-    st[id] = 'ajuste';
-    const card = document.querySelector('[data-id="' + id + '"]');
-    card.dataset.status = 'ajuste';
-    card.className = card.className.replace(/aprovado|ajuste/g, '').trim() + ' ajuste';
-    document.getElementById('sd-' + id).className = 'status-dot ajuste';
-    const obsWrap = document.getElementById('obs-wrap-' + id);
-    obsWrap.style.display = 'block';
-    const cb = document.getElementById('cb-' + id);
-    if (!cb.classList.contains('open')) cb.classList.add('open');
-    document.getElementById('btn-j-' + id).className = 'btn-ajuste ativo';
-    document.getElementById('btn-a-' + id).className = 'btn-aceitar';
-    const rs = document.getElementById('rs-' + id);
-    if (rs) { rs.className = 'sb sj'; rs.textContent = 'Ajuste'; }
+    st[id]='ajuste';
+    const card=document.querySelector('[data-id="'+id+'"]');
+    card.dataset.status='ajuste';
+    card.className=card.className.replace(/aprovado|ajuste/g,'').trim()+' ajuste';
+    document.getElementById('sd-'+id).className='status-dot ajuste';
+    const obsWrap=document.getElementById('obs-wrap-'+id);
+    obsWrap.style.display='block';
+    const cb=document.getElementById('cb-'+id);
+    if(!cb.classList.contains('open')) cb.classList.add('open');
+    document.getElementById('btn-j-'+id).className='btn-ajuste ativo';
+    document.getElementById('btn-a-'+id).className='btn-aceitar';
+    const rs=document.getElementById('rs-'+id);
+    if(rs){rs.className='sb sj';rs.textContent='Ajuste';}
     upd();
   }
 
   function tog(id) {
-    document.getElementById('cb-' + id).classList.toggle('open');
+    document.getElementById('cb-'+id).classList.toggle('open');
   }
 
-  async function enviarMake() {
-    const btn = document.querySelector('.btn-enviar');
+  async function enviarTudo() {
+    const btn = document.getElementById('btn-enviar');
     btn.textContent = 'Enviando...';
     btn.disabled = true;
-    const conteudos = [];
+
+    const promises = [];
+
     for (let i = 1; i <= TOTAL; i++) {
-      const card = document.querySelector('[data-id="' + i + '"]');
-      const obsEl = document.getElementById('obs-' + i);
-      conteudos.push({
-        id: i,
-        titulo: card ? card.dataset.titulo : 'Conteúdo ' + i,
-        data: card ? card.dataset.data : '',
+      const card = document.querySelector('[data-id="'+i+'"]');
+      const obsEl = document.getElementById('obs-'+i);
+      
+      const payload = {
+        cliente: 'Alice Ferreira Estetica',
+        conteudo: card ? card.dataset.conteudo : 'Conteudo '+i,
         status: st[i],
-        observacao: obsEl ? obsEl.value.trim() : ''
-      });
+        observacao: obsEl ? obsEl.value.trim() : '',
+        data_envio: hoje(),
+        link: window.location.href
+      };
+
+      console.log('Enviando payload:', JSON.stringify(payload));
+
+      promises.push(
+        fetch(WEBHOOK, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        })
+      );
     }
+
     try {
-      const resp = await fetch(MAKE_WEBHOOK, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ cliente: CLIENTE, mes: MES, data_envio: new Date().toLocaleDateString('pt-BR'), conteudos })
-      });
-      if (resp.ok || resp.status === 200) {
-        document.getElementById('msg-ok').style.display = 'block';
-        document.getElementById('msg-err').style.display = 'none';
-        btn.textContent = 'Enviado com sucesso!';
-      } else { throw new Error(); }
-    } catch (e) {
+      await Promise.all(promises);
+      document.getElementById('msg-ok').style.display = 'block';
+      document.getElementById('msg-err').style.display = 'none';
+      btn.textContent = 'Enviado com sucesso!';
+    } catch(e) {
+      console.error('Erro ao enviar:', e);
       document.getElementById('msg-err').style.display = 'block';
       document.getElementById('msg-ok').style.display = 'none';
       btn.textContent = 'Enviar aprovações para a Vibrae';
@@ -679,34 +564,62 @@ Sexta (27/jun): "Hoje é minha última sexta de junho. Obrigada pela confiança.
     }
   }
 
-  function showTab(name, btn) {
-    document.querySelectorAll('.tc-wrap').forEach(t => t.classList.remove('on'));
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('on'));
+  function showTab(name,btn) {
+    document.querySelectorAll('.tc-wrap').forEach(t=>t.classList.remove('on'));
+    document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
     document.getElementById(name).classList.add('on');
     btn.classList.add('on');
   }
 
   function fAll(btn) {
-    document.querySelectorAll('.fb').forEach(b => b.classList.remove('on'));
+    document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on'));
     btn.classList.add('on');
-    document.querySelectorAll('.cc').forEach(c => c.style.display = '');
+    document.querySelectorAll('.cc').forEach(c=>c.style.display='');
   }
 
-  function fTipo(tipo, btn) {
-    document.querySelectorAll('.fb').forEach(b => b.classList.remove('on'));
+  function fTipo(tipo,btn) {
+    document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on'));
     btn.classList.add('on');
-    document.querySelectorAll('.cc').forEach(c => {
-      c.style.display = c.dataset.tipo === tipo ? '' : 'none';
-    });
+    document.querySelectorAll('.cc').forEach(c=>{c.style.display=c.dataset.tipo===tipo?'':'none';});
   }
 
-  function fSt(status, btn) {
-    document.querySelectorAll('.fb').forEach(b => b.classList.remove('on'));
+  function fSt(status,btn) {
+    document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on'));
     btn.classList.add('on');
-    document.querySelectorAll('.cc').forEach(c => {
-      c.style.display = c.dataset.status === status ? '' : 'none';
-    });
+    document.querySelectorAll('.cc').forEach(c=>{c.style.display=c.dataset.status===status?'':'none';});
   }
 </script>
-</body>
+
+<!--
+=== MAPEAMENTO NO MAKE ===
+
+GOOGLE SHEETS:
+Cliente    = cliente
+Conteudo   = conteudo
+Status     = status
+Observacao = observacao
+Data       = data_envio
+Link       = link
+
+NOTION:
+Cliente    = cliente
+Conteudo   = conteudo
+Status     = status
+Observacao = observacao
+Data       = data_envio
+Link       = link
+
+=== ESTRUTURA DO JSON ENVIADO ===
+{
+  "cliente": "Alice Ferreira Estetica",
+  "conteudo": "nome do conteudo",
+  "status": "aprovado | ajuste | pendente",
+  "observacao": "texto digitado ou vazio",
+  "data_envio": "DD/MM/AAAA",
+  "link": "URL da pagina"
+}
+
+Cada conteudo e enviado individualmente como um POST separado.
+Total de 12 requisicoes ao clicar em Enviar aprovacoes.
+-->
 </html>
