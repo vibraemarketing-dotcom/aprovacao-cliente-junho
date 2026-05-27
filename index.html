@@ -536,13 +536,18 @@ Sexta (27/jun): "Hoje é minha última sexta de junho. Obrigada pela confiança.
     var msgLoading = document.getElementById('msg-loading');
 
     btn.disabled = true;
-    btn.textContent = 'Enviando...';
-    msgLoading.style.display = 'block';
     msgOk.style.display = 'none';
     msgErr.style.display = 'none';
+    msgLoading.style.display = 'block';
+
+    var dataHoje = getDataHoje();
+    var linkAtual = window.location.href;
 
     try {
       for (var i = 1; i <= TOTAL; i++) {
+
+        btn.textContent = 'Enviando ' + i + ' de ' + TOTAL + '...';
+
         var card = document.querySelector('[data-id="' + i + '"]');
         var obsEl = document.getElementById('obs-' + i);
 
@@ -551,11 +556,11 @@ Sexta (27/jun): "Hoje é minha última sexta de junho. Obrigada pela confiança.
           conteudo: card ? card.getAttribute('data-conteudo') : 'Conteudo ' + i,
           status: statusMap[i],
           observacao: obsEl ? obsEl.value.trim() : '',
-          data_envio: getDataHoje(),
-          link: window.location.href
+          data_envio: dataHoje,
+          link: linkAtual
         };
 
-        console.log('Enviando payload ID ' + i + ':', JSON.stringify(payload));
+        console.log('Enviando payload ' + i + ' de ' + TOTAL + ':', JSON.stringify(payload));
 
         var resposta = await fetch(WEBHOOK, {
           method: 'POST',
@@ -564,10 +569,10 @@ Sexta (27/jun): "Hoje é minha última sexta de junho. Obrigada pela confiança.
         });
 
         if (!resposta.ok) {
-          throw new Error('Erro ao enviar conteudo ' + i);
+          throw new Error('Erro no envio do conteudo ' + i + ' — status: ' + resposta.status);
         }
 
-        await new Promise(function(resolve) { setTimeout(resolve, 800); });
+        await new Promise(function(resolve) { setTimeout(resolve, 2000); });
       }
 
       msgLoading.style.display = 'none';
