@@ -536,43 +536,47 @@ Sexta (27/jun): "Hoje é minha última sexta de junho. Obrigada pela confiança.
     var msgLoading = document.getElementById('msg-loading');
 
     btn.disabled = true;
+    btn.textContent = 'Enviando...';
     msgOk.style.display = 'none';
     msgErr.style.display = 'none';
     msgLoading.style.display = 'block';
 
-    var dataHoje = getDataHoje();
-    var linkAtual = window.location.href;
+    var aprovacoes = [];
+
+    for (var i = 1; i <= TOTAL; i++) {
+      var card = document.querySelector('[data-id="' + i + '"]');
+      var obsEl = document.getElementById('obs-' + i);
+      var obsValor = '';
+
+      if (obsEl) {
+        obsValor = obsEl.value.trim();
+      }
+
+      aprovacoes.push({
+        conteudo: card ? card.getAttribute('data-conteudo') : 'Conteudo ' + i,
+        status: statusMap[i] || 'pendente',
+        observacao: obsValor
+      });
+    }
+
+    var payload = {
+      cliente: 'Alice Ferreira Estetica',
+      data_envio: getDataHoje(),
+      link: window.location.href,
+      aprovacoes: aprovacoes
+    };
+
+    console.log('Payload completo:', JSON.stringify(payload));
 
     try {
-      for (var i = 1; i <= TOTAL; i++) {
+      var resposta = await fetch(WEBHOOK, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
 
-        btn.textContent = 'Enviando ' + i + ' de ' + TOTAL + '...';
-
-        var card = document.querySelector('[data-id="' + i + '"]');
-        var obsEl = document.getElementById('obs-' + i);
-
-        var payload = {
-          cliente: 'Alice Ferreira Estetica',
-          conteudo: card ? card.getAttribute('data-conteudo') : 'Conteudo ' + i,
-          status: statusMap[i],
-          observacao: obsEl ? obsEl.value.trim() : '',
-          data_envio: dataHoje,
-          link: linkAtual
-        };
-
-        console.log('Enviando payload ' + i + ' de ' + TOTAL + ':', JSON.stringify(payload));
-
-        var resposta = await fetch(WEBHOOK, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        });
-
-        if (!resposta.ok) {
-          throw new Error('Erro no envio do conteudo ' + i + ' — status: ' + resposta.status);
-        }
-
-        await new Promise(function(resolve) { setTimeout(resolve, 2000); });
+      if (!resposta.ok) {
+        throw new Error('Erro na resposta do servidor: ' + resposta.status);
       }
 
       msgLoading.style.display = 'none';
