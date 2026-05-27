@@ -529,7 +529,7 @@ Sexta (27/jun): "Hoje é minha última sexta de junho. Obrigada pela confiança.
     document.getElementById('cb-' + id).classList.toggle('open');
   }
 
-  function enviarTudo() {
+  async function enviarTudo() {
     var btn = document.getElementById('btn-enviar');
     var msgOk = document.getElementById('msg-ok');
     var msgErr = document.getElementById('msg-err');
@@ -541,52 +541,48 @@ Sexta (27/jun): "Hoje é minha última sexta de junho. Obrigada pela confiança.
     msgOk.style.display = 'none';
     msgErr.style.display = 'none';
 
-    var promises = [];
-    var dataHoje = getDataHoje();
-    var linkAtual = window.location.href;
+    try {
+      for (var i = 1; i <= TOTAL; i++) {
+        var card = document.querySelector('[data-id="' + i + '"]');
+        var obsEl = document.getElementById('obs-' + i);
 
-    for (var i = 1; i <= TOTAL; i++) {
-      var card = document.querySelector('[data-id="' + i + '"]');
-      var obsEl = document.getElementById('obs-' + i);
-      var obsValor = obsEl ? obsEl.value.trim() : '';
+        var payload = {
+          cliente: 'Alice Ferreira Estetica',
+          conteudo: card ? card.getAttribute('data-conteudo') : 'Conteudo ' + i,
+          status: statusMap[i],
+          observacao: obsEl ? obsEl.value.trim() : '',
+          data_envio: getDataHoje(),
+          link: window.location.href
+        };
 
-      var payload = {
-        cliente: 'Alice Ferreira Estetica',
-        conteudo: card ? card.getAttribute('data-conteudo') : 'Conteudo ' + i,
-        status: statusMap[i],
-        observacao: obsValor,
-        data_envio: dataHoje,
-        link: linkAtual
-      };
+        console.log('Enviando payload ID ' + i + ':', JSON.stringify(payload));
 
-      console.log('Enviando payload ID ' + i + ':', JSON.stringify(payload));
+        var resposta = await fetch(WEBHOOK, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
 
-      var p = fetch(WEBHOOK, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(payload)
-      });
+        if (!resposta.ok) {
+          throw new Error('Erro ao enviar conteudo ' + i);
+        }
 
-      promises.push(p);
+        await new Promise(function(resolve) { setTimeout(resolve, 800); });
+      }
+
+      msgLoading.style.display = 'none';
+      msgOk.style.display = 'block';
+      msgErr.style.display = 'none';
+      btn.textContent = 'Enviado com sucesso!';
+
+    } catch(e) {
+      console.error('Erro ao enviar:', e);
+      msgLoading.style.display = 'none';
+      msgErr.style.display = 'block';
+      msgOk.style.display = 'none';
+      btn.textContent = 'Enviar aprovações para a Vibrae';
+      btn.disabled = false;
     }
-
-    Promise.all(promises)
-      .then(function() {
-        msgLoading.style.display = 'none';
-        msgOk.style.display = 'block';
-        msgErr.style.display = 'none';
-        btn.textContent = 'Enviado com sucesso!';
-      })
-      .catch(function(err) {
-        console.error('Erro ao enviar:', err);
-        msgLoading.style.display = 'none';
-        msgErr.style.display = 'block';
-        msgOk.style.display = 'none';
-        btn.textContent = 'Enviar aprovações para a Vibrae';
-        btn.disabled = false;
-      });
   }
 
   function showTab(name, btn) {
